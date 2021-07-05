@@ -1,0 +1,17 @@
+[package]
+name = "battery-alert"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+notify-rust = { version = "4.5.2", default-features = false, features=["z"] }
+daemonize   = "0.4.1"
+libc        = "0.2.97"
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = 'z'
+panic = 'abort'
