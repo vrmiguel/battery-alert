@@ -26,7 +26,6 @@ fn main() {
     }
 
     println!("User {} started the daemon.", username);
-    let monitor = monitor::Monitor::new();
 
-    monitor.start_loop()
+    monitor::Monitor::new().start_loop()
 }

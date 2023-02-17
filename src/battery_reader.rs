@@ -1,5 +1,6 @@
 use std::fs::read_to_string;
 
+#[derive(Clone, Copy)]
 pub enum BatteryStatus {
     Unknown,
     Charging(u8),
